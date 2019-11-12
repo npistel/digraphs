@@ -1,0 +1,99 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{First Main Section}{3}{First Main Section}{0}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{First Subsection}}
+\headcommand {\slideentry {1}{1}{1}{4/4}{First Subsection}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Second Subsection}}
+\headcommand {\slideentry {1}{2}{1}{5/10}{Second Subsection}{0}}
+\headcommand {\beamer@framepages {5}{10}}
+\headcommand {\beamer@sectionpages {3}{10}}
+\headcommand {\beamer@subsectionpages {5}{10}}
+\headcommand {\sectionentry {2}{Topologisches Sortieren}{11}{Topologisches Sortieren}{0}}
+\headcommand {\slideentry {2}{0}{1}{11/11}{}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Beispiel: Topologisches Sortieren}}
+\headcommand {\slideentry {2}{1}{1}{12/12}{Beispiel: Topologisches Sortieren}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {2}{1}{2}{13/13}{Beispiel: Topologisches Sortieren}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@subsectionpages {12}{13}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{14}{Kahn's Algorithmus}}
+\headcommand {\slideentry {2}{2}{1}{14/14}{Kahn's Algorithmus}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {2}{2}{2}{15/44}{Kahn's Algorithmus}{0}}
+\headcommand {\beamer@framepages {15}{44}}
+\headcommand {\beamer@sectionpages {11}{44}}
+\headcommand {\beamer@subsectionpages {14}{44}}
+\headcommand {\sectionentry {3}{Wege in Digraphen}{45}{Wege in Digraphen}{0}}
+\headcommand {\slideentry {3}{0}{1}{45/45}{}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\slideentry {3}{0}{2}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\beamer@subsectionpages {45}{46}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{47}{Wege als transitiver Abschluss der Kantenrelation}}
+\headcommand {\slideentry {3}{1}{1}{47/47}{Wege als transitiver Abschluss der Kantenrelation}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {3}{1}{2}{48/48}{Wege als transitiver Abschluss der Kantenrelation}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\slideentry {3}{1}{3}{49/49}{Wege als transitiver Abschluss der Kantenrelation}{0}}
+\headcommand {\beamer@framepages {49}{49}}
+\headcommand {\beamer@subsectionpages {47}{49}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{50}{Warshall's Algorithmus}}
+\headcommand {\slideentry {3}{2}{1}{50/50}{Warshall's Algorithmus}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\slideentry {3}{2}{2}{51/51}{Warshall's Algorithmus}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {3}{2}{3}{52/79}{Warshall's Algorithmus}{0}}
+\headcommand {\beamer@framepages {52}{79}}
+\headcommand {\beamer@sectionpages {45}{79}}
+\headcommand {\beamer@subsectionpages {50}{79}}
+\headcommand {\sectionentry {4}{Kürzeste Wege}{80}{Kürzeste Wege}{0}}
+\headcommand {\slideentry {4}{0}{1}{80/80}{}{0}}
+\headcommand {\beamer@framepages {80}{80}}
+\headcommand {\slideentry {4}{0}{2}{81/81}{}{0}}
+\headcommand {\beamer@framepages {81}{81}}
+\headcommand {\beamer@subsectionpages {80}{81}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{82}{Dijkstra's Algorithmus}}
+\headcommand {\slideentry {4}{1}{1}{82/82}{Dijkstra's Algorithmus}{0}}
+\headcommand {\beamer@framepages {82}{82}}
+\headcommand {\slideentry {4}{1}{2}{83/103}{Dijkstra's Algorithmus}{0}}
+\headcommand {\beamer@framepages {83}{103}}
+\headcommand {\slideentry {4}{1}{3}{104/104}{Dijkstra's Algorithmus}{0}}
+\headcommand {\beamer@framepages {104}{104}}
+\headcommand {\beamer@sectionpages {80}{104}}
+\headcommand {\beamer@subsectionpages {82}{104}}
+\headcommand {\sectionentry {5}{Summary}{105}{Summary}{0}}
+\headcommand {\slideentry {5}{0}{1}{105/105}{}{0}}
+\headcommand {\beamer@framepages {105}{105}}
+\headcommand {\slideentry {5}{0}{2}{106/106}{}{0}}
+\headcommand {\beamer@framepages {106}{106}}
+\headcommand {\gdef \insertmainframenumber {20}}
+\headcommand {\partentry {Appendix}{1}}
+\headcommand {\beamer@partpages {1}{106}}
+\headcommand {\beamer@sectionpages {105}{106}}
+\headcommand {\beamer@subsectionpages {105}{106}}
+\headcommand {\beamer@appendixpages {107}}
+\headcommand {\beamer@sectionpages {107}{106}}
+\headcommand {\beamer@subsectionpages {107}{106}}
+\headcommand {\sectionentry {6}{Appendix}{107}{Appendix}{1}}
+\headcommand {\slideentry {6}{0}{1}{107/107}{}{1}}
+\headcommand {\beamer@framepages {107}{107}}
+\headcommand {\beamer@subsectionpages {107}{107}}
+\headcommand {\beamer@subsectionentry {1}{6}{1}{108}{For Further Reading}}
+\headcommand {\slideentry {6}{1}{1}{108/108}{For Further Reading}{1}}
+\headcommand {\beamer@framepages {108}{108}}
+\headcommand {\beamer@partpages {107}{108}}
+\headcommand {\beamer@subsectionpages {108}{108}}
+\headcommand {\beamer@sectionpages {107}{108}}
+\headcommand {\beamer@documentpages {108}}
+\headcommand {\gdef \inserttotalframenumber {21}}
