@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.10)  12 NOV 2019 12:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.10)  12 NOV 2019 19:40
 entering extended mode
 **c:/Users/NicoPistel/Desktop/digraphs/presentation.tex
 (c:/Users/NicoPistel/Desktop/digraphs/presentation.tex
@@ -4359,23 +4359,29 @@ Overfull \vbox (9.29723pt too high) detected at line 575
 [103
 
 ]
-Overfull \vbox (30.6375pt too high) detected at line 592
+Overfull \vbox (9.30284pt too high) detected at line 613
  []
 
 [104
 
-] [105
+]
+Overfull \vbox (30.6375pt too high) detected at line 630
+ []
+
+[105
 
 ] [106
 
 ] [107
 
+] [108
+
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 650.
+(Font)              using `OT1/cmss/bx/n' instead on input line 688.
 
-[108
+[109
 
  <C:/Program Files/MiKTeX 2.9/tex/latex/beamer/beamericonbook.pdf> <C:/Program 
 Files/MiKTeX 2.9/tex/latex/beamer/beamericonarticle.pdf>]
@@ -4388,23 +4394,23 @@ Files/MiKTeX 2.9/tex/latex/beamer/beamericonarticle.pdf>]
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 652.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 652.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 690.
  (presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 652.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 652.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 690.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 690.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: CBC9374AE71F694547E82C8131973490;949.
+(rerunfilecheck)             Checksum: F010DFEA8C3CD7943DD1873B6879DF8E;949.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 46364 strings out of 492453
- 936479 string characters out of 3129804
- 1238260 words of memory out of 3000000
- 49751 multiletter control sequences out of 15000+200000
+ 46371 strings out of 492453
+ 936577 string characters out of 3129804
+ 1238318 words of memory out of 3000000
+ 49756 multiletter control sequences out of 15000+200000
  547216 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,23n,102p,1872b,2473s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -4426,9 +4432,9 @@ lic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxf
 ont/line10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb>
-Output written on presentation.pdf (108 pages, 614621 bytes).
+Output written on presentation.pdf (109 pages, 617936 bytes).
 PDF statistics:
- 796 PDF objects out of 1000 (max. 8388607)
- 234 named destinations out of 1000 (max. 500000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 236 named destinations out of 1000 (max. 500000)
  168 words of extra memory for PDF output out of 10000 (max. 10000000)
 

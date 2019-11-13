@@ -573,6 +573,44 @@
         \end{column}
     \end{columns}
 \end{frame}
+\begin{frame}[t]{Shortest-Path Baum}
+    \begin{columns}
+        \begin{column}{0.70\textwidth}
+            \begin{tikzpicture}
+                \begin{scope}[every node/.style={circle,thick,draw}]
+                    \node (A) at (2.5, 4) {A};
+
+                    \node (B) at (0, 1.67) {B};
+                    \node (D) at (2.5, 1.67) {D};
+                    \node (E) at (5, 1.67) {E};
+
+                    \node (C) at (2.5,-0.67) {C};
+
+                    \node (F) at (2.5,-3) {F};
+                \end{scope}
+                \begin{scope}[>={Stealth[black]}, every edge/.style={draw=red,very thick}]
+                    \path [->] (A) edge node {$5$} (B);
+                    \path [->] (A) edge node {$4$} (D);
+                    \path [->] (D) edge node {$2$} (C);
+                    \path [->] (A) edge node {$3$} (E);
+                    \path [->] (C) edge node {$2$} (F);
+                \end{scope}
+            \end{tikzpicture}
+        \end{column}
+        \begin{column}{0.30\textwidth}
+            \begin{tabular}{c|c|c}
+                $v$ & $d(v)$ & $p(v)$ \\
+                \hline
+                A & $0$ & $\varnothing$ \\
+                B & $5$ & A \\
+                C & $6$ & D \\
+                D & $4$ & A \\
+                E & $3$ & A \\
+                F & $8$ & C \\
+            \end{tabular}
+        \end{column}
+    \end{columns}
+\end{frame}
 \begin{frame}{Blocks}
 \begin{block}{Block Title}
 You can also highlight sections of your presentation in a block, with it's own title
