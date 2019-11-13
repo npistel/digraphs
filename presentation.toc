@@ -1,12 +1,9 @@
 \babel@toc {english}{}
-\beamer@sectionintoc {1}{First Main Section}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{First Subsection}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Second Subsection}{5}{0}{1}
-\beamer@sectionintoc {2}{Topologisches Sortieren}{11}{0}{2}
-\beamer@subsectionintoc {2}{1}{Beispiel: Topologisches Sortieren}{12}{0}{2}
-\beamer@subsectionintoc {2}{2}{Kahn's Algorithmus}{14}{0}{2}
-\beamer@sectionintoc {3}{Wege in Digraphen}{45}{0}{3}
-\beamer@subsectionintoc {3}{1}{Wege als transitiver Abschluss der Kantenrelation}{47}{0}{3}
-\beamer@subsectionintoc {3}{2}{Warshall's Algorithmus}{50}{0}{3}
-\beamer@sectionintoc {4}{Kürzeste Wege}{80}{0}{4}
-\beamer@subsectionintoc {4}{1}{Dijkstra's Algorithmus}{82}{0}{4}
+\beamer@sectionintoc {1}{Begriffe \& Definitionen}{3}{0}{1}
+\beamer@sectionintoc {2}{Topologisches Sortieren}{18}{0}{2}
+\beamer@subsectionintoc {2}{1}{Kahn's Algorithmus}{30}{0}{2}
+\beamer@sectionintoc {3}{Wege in Digraphen}{66}{0}{3}
+\beamer@subsectionintoc {3}{1}{Wege als transitiver Abschluss der Kantenrelation}{70}{0}{3}
+\beamer@subsectionintoc {3}{2}{Warshall's Algorithmus}{80}{0}{3}
+\beamer@sectionintoc {4}{Kürzeste Wege}{113}{0}{4}
+\beamer@subsectionintoc {4}{1}{Dijkstra's Algorithmus}{118}{0}{4}

@@ -29,6 +29,7 @@
 \usepackage{outlines}
 \usepackage{kbordermatrix}
 \usepackage[customcolors]{hf-tikz}
+\usepackage{pgfpages}
 
 \usetikzlibrary{arrows.meta}
 
@@ -74,46 +75,29 @@
 %\setbeamercolor{background canvas}{bg=white}
 \metroset{block=fill}
 
+\setbeamertemplate{note page}[plain]
+\setbeameroption{show notes on second screen=right}
+
 \title{Gerichtete Graphen}
 %\subtitle{Gerichtete Graphen}
 
 \author{Nico Pistel}
-% - Give the names in the same order as the appear in the paper.
-% - Use the \inst{?} command only if the authors have different
-%     affiliation.
 
-\institute[Institute] % (optional, but mostly needed)
+\institute[Institute]
 {
     Fachbereich Wirtschaft und Informationstechnik\\
     Westfälische Hochschule Bocholt
 }
 
 \date{Diskrete Mathematik und Stochastik, 2019}
-% - Either use conference name or its abbreviation.
-% - Not really informative to the audience, more for people (including
-%     yourself) who are reading the slides online
 
 \subject{Subject}
 % This is only inserted into the PDF information catalog. Can be left
 % out.
 
-% If you have a file called "university-logo-filename.xxx", where xxx
-% is a graphic format that can be processed by latex or pdflatex,
-% resp., then you can add a logo as follows:
-
 \pgfdeclareimage[height=0.5cm]{university-logo}{img/wh.png}
 \logo{\pgfuseimage{university-logo}}
 
-% Delete this, if you do not want the table of contents to pop up at
-% the beginning of each subsection:
-%\AtBeginSubsection[]
-%{
-%    \begin{frame}<beamer>{Outline}
-%        \tableofcontents[currentsection,currentsubsection]
-%    \end{frame}
-%}
-
-% Let's get started
 \begin{document}
 
 \begin{frame}
@@ -125,54 +109,61 @@
     % You might wish to add the option [pausesections]
 \end{frame}
 
-% Section and subsections will appear in the presentation overview
-% and table of contents.
-\section{First Main Section}
-
-\subsection{First Subsection}
-
-\begin{frame}{First Slide Title}{Optional Subtitle}
-    \begin{itemize}
-    \item {
-        My first point.
-    }
-    \item {
-        My second point.
-    }
-    \end{itemize}
+\section{Begriffe \& Definitionen}
+\begin{frame}{Begriffe \& Definitionen}
+    \begin{outline}
+        \1 Ein gerichteter Graph (\textbf{Di}rected \textbf{Graph} - \textit{Digraph}) ist ein Graph, wobei die Kanten mit einer Richtung ausgezeichnet sind\pause
+        \1 Unterschied zum ungerichteten Graphen: Kantenrelation $E$ von $G=(V,E)$ ist nicht zwingend symmetrisch\pause
+        \2 Adjazenzmatrix $\mathbf{M}$ von $G$ ist nicht zwingend symmetrisch\pause
+        \1 Die Richtung der gerichtete Kanten werden durch Pfeile gekennzeichnet\note{Bereits zur Visualisierung von binären Relationen bekannt. Gerichtete Kannten werden auch Arrows, Pfeile oder auch nur Kanten genannt (aus Zusammenhang schließen)}
+    \end{outline}
 \end{frame}
-
-\subsection{Second Subsection}
-
-% You can reveal the parts of a slide one at a time
-% with the \pause command:
-\begin{frame}{Second Slide Title}
-    \begin{itemize}
-    \item {
-        First item.
-        \pause % The slide will pause after showing the first item
-    }
-    \item {
-        Second item.
-    }
-    % You can also specify when the content should appear
-    % by using <n->:
-    \item<3-> {
-        Third item.
-    }
-    \item<4-> {
-        Fourth item.
-    }
-    % or you can use the \uncover command to reveal general
-    % content (not just \items):
-    \item<5-> {
-        Fifth item. \uncover<6->{Extra text in the fifth item.}
-    }
-    \end{itemize}
+\begin{frame}{Begriffe \& Definitionen}
+    \begin{outline}
+        \1 Ein schlichter (Di-)Graph hat keine Schlingen und keine mehrfachen gerichteten Kanten\note{Schlichte (und natürlich ENDLICHE) Digraphen werden betrachtet}\pause
+        \1 Anzahl der ausgehenden Kanten von einem Knoten $v$ ist der Ausgangsgrad (\textit{Outdegree}) von $v$: $\deg^+(v)$\pause
+        \1 Anzahl der eingehenden Kanten an einem Knoten $v$ ist der Eingangsgrad (\textit{Indegree}) von $v$: $\deg^-(v)$
+    \end{outline}\pause
+    \begin{lemma}
+        \[\sum_{v\in V}\deg^+(v)=\sum_{v\in V}\deg^-(v)=|E|\]
+    \end{lemma}
+\end{frame}
+\begin{frame}{Begriffe \& Definitionen}
+    \begin{outline}
+        \1 Ein Digraph ist (schwach) zusammenhängend, wenn der zugrunde liegende (ungerichtete) Graph zusammenhängend ist\pause
+        \2 Er ist stark zusammenhängend, wenn es zu jeden Knotenpaar $(u,v)$ einen Weg von $u$ nach $v$ gibt und einen Weg von $v$ nach $u$
+    \end{outline}
+\end{frame}
+\begin{frame}{Begriffe \& Definitionen}
+    \begin{outline}
+        \1 $(u,v)\in E\Longrightarrow$ $u$ ist ein Vorgänger von $v$\pause
+        \1 Ein Digraph ohne Zyklen heißt azyklischer Digraph\pause
+        \2 \textbf{D}irected \textbf{A}cyclic \textbf{G}raph (\textit{DAG})\pause
+        \2 Bei Problemen der Aufgabenplanung heißt ein DAG auch ein PERT-Chart
+        \3 Program Evaluation and Review Technique
+    \end{outline}
 \end{frame}
 
 \section{Topologisches Sortieren}
-\subsection{Beispiel: Topologisches Sortieren}
+\begin{frame}{Topologisches Sortieren}
+    \begin{outline}
+        \1 Beispiel: Aufgaben sollen abgearbeitet werden\pause
+        \2 Problem: Aufgaben setzen ggf. voraus, dass andere Aufgaben bereits erledigt wurden\pause
+        \2 Motivation: Scheduling, Build-Prozesse\pause
+        \1 Problemstellung lässt sich als DAG modellieren\pause
+        \2 Warum azyklisch und nicht als allgemeiner (gerichteter) Graph?\pause
+        \3 Zyklen deuten auf Aufgaben hin, welche sich selber zur Abarbeitung voraussetzen
+        \3 Solche Aufgaben könnten nie abgearbeitet werden
+    \end{outline}
+\end{frame}
+\begin{frame}{Topologisches Sortieren}
+    \begin{outline}
+        \1 Gesucht ist eine Anordnung, die eine Reihenfolge vorgibt, in welcher die Aufgaben abgearbeitet werden können
+        \2 So, dass jede Aufgabe direkt bearbeitet werden kann (alle nötigen Vorausetzungen wurden zuvor erfüllt)\pause
+        \1 Eine topologische Sortierung liefert eine solche \textit{konsistente Anordnung} der Knoten\pause
+        \1 Für alle Kanten $(u,v)\in E$ gilt, dass $u$ in der Anordnung stets vor $v$ kommt
+    \end{outline}
+\end{frame}
 \begin{frame}{Beispiel: Topologisches Sortieren}
     \centering
     \begin{tikzpicture}
@@ -259,7 +250,16 @@
 \end{frame}
 \subsection{Kahn's Algorithmus}
 \begin{frame}{Kahn's Algorithmus}
-    jo
+    \begin{outline}
+        \1 Ein möglicher Algorithmus zur topologischen Sortierung ist Kahn's Algorithmus\pause
+        \1 Wechsel der Datenstruktur: Für jeden Knoten $v$ wird die Menge seiner Vorgänger $A(v)$ betrachtet\pause
+        \1 Anordnung wird intuitiv erzeugt: In jedem Schritt wird ein Knoten ausgewählt, welcher direkt abgearbeitet werden kann (mögliche Vorgänger sind bereits in der Anordnung vorhanden)\pause
+        \1 Wiederholung bis alle Knoten in der Anordnung vorhanden sind\pause
+        \1 Es lässt sich immer (mindestens) ein solch ein Knoten auswählen
+        \2 Sonst ist ein Zyklus im Graph vorhanden\pause
+        \1 Anordnung muss nicht eindeutig sein
+        \2 Es können in einem Schritt mehrere Knoten zur Auswahl stehen
+    \end{outline}
 \end{frame}
 \begin{frame}{Beispiel: Kahn's Algorithmus}
     \begin{columns}
@@ -341,28 +341,29 @@
 \section{Wege in Digraphen}
 \begin{frame}{Wege in Digraphen}
     \begin{itemize}
-        \item Existenz von Wegen zwischen beliebigen Knoten
-        \item Adjazenzmatrix $\mathbf{M}\longrightarrow$ Erreichbarkeitsmatrix $\mathbf{M}^*$
+        \item Existenz von Wegen zwischen beliebigen Knoten\pause
+        \item Adjazenzmatrix $\mathbf{M}\longrightarrow$ Erreichbarkeitsmatrix $\mathbf{M}^*$\pause
         \item Kantenrelation $E\longrightarrow$ transitiver Abschluss $E^*$
     \end{itemize}
 \end{frame}
 \subsection{Wege als transitiver Abschluss der Kantenrelation}
 \begin{frame}{Wege als transitiver Abschluss der Kantenrelation}
     \begin{itemize}
-        \item Kantenrelation $E$: Menge von Wegen der Länge $1$ zwischen Knoten
-        \item Menge von Wegen der Länge $2$ als Komposition von $E$ mit sich selber:\\$E\circ E=\{(v_1,v_2)\in V^2|\exists u\in V:(v_1,u)\in E\land(u,v_2)\in E\}$
-        \item Menge von Wegen einer Länge $k$: $\underbrace{E\circ\dots\circ E}_{k\text{ mal}}$
-        \item Transitiver Abschluss als Vereinigung dieser Mengen:\\$E^*=E\cup E\circ E\cup\dots\cup\underbrace{E\circ\dots\circ E}_{n\text{ mal}}$
+        \item Kantenrelation $E$: Menge von Wegen der Länge $1$ zwischen Knoten\pause
+        \item Menge von Wegen der Länge $2$ als Komposition von $E$ mit sich selber:\\$E\circ E=\{(v_1,v_2)\in V^2|\exists u\in V:(v_1,u)\in E\land(u,v_2)\in E\}$\pause
+        \item Menge von Wegen einer Länge $k$: $\underbrace{E\circ\dots\circ E}_{k\text{ mal}}$\note{Nicht Path sondern Walk!}\pause
+        \item Transitiver Abschluss als Vereinigung dieser Mengen:\\$E^*=E\cup E\circ E\cup\dots\cup\underbrace{E\circ\dots\circ E}_{\alt<5->{n}{\text{?}}\text{ mal}}$
     \end{itemize}
 \end{frame}
 \begin{frame}{Potenzieren der Adjazenzmatrix}
     \begin{outline}
-        \1 Komposition von $E$ als logisches Matrixprodukt der Adjazenzmatrix $\mathbf{M}$
-        \1 Weitere Komposition durch das Potenzieren von $\mathbf{M}$
+        \1 Komposition von $E$ als logisches Matrixprodukt der Adjazenzmatrix $\mathbf{M}$\pause
+        \1 Weitere Komposition durch das Potenzieren von $\mathbf{M}$\pause
         \1 Vereinigen der Mengen durch das logische \textbf{oder} der Matrizen
         \1 Logisches \textbf{oder} zweier Matrizen wird komponentenweise gebildet
         \2 $(\mathbf{A}\lor\mathbf{B})_{ij}=\mathbf{A}_{ij}\lor\mathbf{B}_{ij}$
     \end{outline}
+    \pause
     \begin{block}{Berechnung der Erreichbarkeitsmatrix $\mathbf{M}^*$}
         \[\mathbf{M}^*=\mathbf{M}\lor\mathbf{M}^2\lor\dots\lor\mathbf{M}^n\]
     \end{block}
@@ -432,11 +433,12 @@
 \subsection{Warshall's Algorithmus}
 \begin{frame}{Warshall's Algorithmus}
     \begin{outline}
+        \pause
         \1 Matrixmultiplikation ist aufwändig
-        \2 Berechnen der Potenzen bei Graphen mit vielen Knoten ist problematisch
+        \2 Berechnen der Potenzen bei Graphen mit vielen Knoten ist problematisch\pause
         \1 Warshall ermittelt $\mathbf{M}^*$ in Worst-Case $\Theta(n^3)$ Zeit
         \1 Warshall's Algorithmus arbeitet \textit{In-Place}
-        \2 $\mathbf{M}$ wird iterativ in $\mathbf{M}^*$ überführt
+        \2 $\mathbf{M}$ wird iterativ in $\mathbf{M}^*$ überführt\pause
         \1 Warshall erzeugt Matrizen $\mathbf{W}_0,\mathbf{W}_1,\dots,\mathbf{W}_n$
         \2 Wobei $\mathbf{W}_0=\mathbf{M}$ und $\mathbf{W}_n=\mathbf{M}^*$
         \1 $\mathbf{W}_k[i,j]=1\Longleftrightarrow$ Es existiert ein Weg von $v_i$ nach $v_j$, wobei alle Zwischenknoten $\in\{v_1,v_2,\dots,v_k\}$ sind
@@ -526,11 +528,50 @@
 \end{frame}
 \section{Kürzeste Wege}
 \begin{frame}{Kürzeste Wege}
-    yo
+    \begin{outline}
+        \1 Gewichteter Digraph: Jede Kante bekommt ein reelle Zahl zugeordnet
+        \2 Gewicht, Kosten, Distanz, \dots dieser Kante\pause
+        \1 Auffindung von Wegen minimaler Gesamtdistanz\pause
+        \1 Motivation: Routingprotokolle (OSPF), Routenplanung, Basis für Suchalgorithmen aus der künstlichen Intelligenz\pause
+        \1 Gewichteter Digraph lässt sich durch Gewichtsmatrix $\mathbf{W}$ repräsentieren, wobei\[\mathbf{W}_{ij}=\begin{cases}0,&i=j\\\infty,&(v_i,v_j)\notin E\\d(v_i,v_j),&sonst\end{cases}\]
+    \end{outline}
 \end{frame}
 \subsection{Dijkstra's Algorithmus}
 \begin{frame}{Dijkstra's Algorithmus}
-    jawohl
+    \pause
+    \begin{outline}
+        \1 Dijkstra's Algorithmus löst das \textit{Single-Source Shortest-Path Problem}\pause
+        \2 Findet zu einem gegebenen Startknoten einen kürzesten Weg zu jedem anderen Knoten des Digraphen\pause
+        \2 Eine Modifikation des Algorithmus von Warshall (Floyd-Warshall-Algorithmus) löst das \textit{All-Nodes Shortest-Path Problem}\pause
+        \1 Vorausetzung für Dijkstra's Algorithmus sind nicht negative Kantengewichte für alle Kanten\pause
+        \2 Ein alternativer Algorithmus (Bellman-Ford-Algorithmus) löst das Problem auch für negative Kantengewichte (jedoch generell langsamer)\pause
+        \2 Gilt jedoch nur, sofern keine negative Zyklen (Zyklen mit negativem Gesamtgewicht) existieren
+        \3 Sonst gibt es keinen eindeutigen Shortest-Path
+    \end{outline}
+\end{frame}
+\begin{frame}{Dijkstra's Algorithmus}
+    \begin{outline}
+        \1 Dijkstra betrachtet im Algorithmus die (aktuelle) Distanz $d(v)$ eines Knotens $v$ vom Startknoten $A$\pause
+        \1 Trivialerweise ist $d(A)=0$, alle anderen Knoten bekommen zunächst eine Distanz von $\infty$ zugewiesen (sind also noch nicht erreichbar)\pause
+        \1 In jedem Schritt des Algorithmus wird ein Knoten betrachtet, abgearbeitet und \textit{markiert}
+        \2 Markierte Knoten gelten als abgearbeitet und werden nicht weiter betrachtet oder verändert
+    \end{outline}
+\end{frame}
+\begin{frame}{Dijkstra's Algorithmus}
+    \begin{outline}
+        \1 Es wird stets der von $A$ am nächsten liegende Knoten $u$ (welcher nicht markiert ist) ausgewählt und markiert\pause
+        \1 Von diesem Knoten aus werden alle benachbarte Knoten $v$ (welche nicht markiert sind) betrachtet\pause
+        \2 Es wird die Distanz von $A$ nach $v$ als $d(u)+d(u,v)$ berechnet (die Distanz von $A$ nach $u$ und von $u$ nach $v$)
+        \2 Ist diese Summe kleiner als die aktuelle Distanz von $A$ nach $v$, wird $d(v)$ mit der zuvor berechneten Summe aktualisiert\pause
+        \1 Dies wird solange wiederholt, bis alle Knoten einmal betrachtet (und markiert) wurden
+    \end{outline}
+\end{frame}
+\begin{frame}{Dijkstra's Algorithmus}
+    \begin{outline}
+        \1 Um später auch den kürzesten Weg von $A$ zu einem beliebigen Knoten $v$ rekonstruieren zu können, wird üblicherweise auch ein \textit{Parent}-Attribut $p(v)$ mitgeführt
+        \2 Dieses enthält den Vorgänger von $v$ im aktuell kürzesten Weg von $A$ nach $v$
+        \2 Dieses Feld wird im Laufe des Algorithmus zusammen mit $d(v)$ aktualisiert
+    \end{outline}
 \end{frame}
 \begin{frame}[t]{Beispiel: Dijkstra's Algorithmus}
     \begin{columns}
@@ -576,26 +617,28 @@
 \begin{frame}[t]{Shortest-Path Baum}
     \begin{columns}
         \begin{column}{0.70\textwidth}
-            \begin{tikzpicture}
-                \begin{scope}[every node/.style={circle,thick,draw}]
-                    \node (A) at (2.5, 4) {A};
-
-                    \node (B) at (0, 1.67) {B};
-                    \node (D) at (2.5, 1.67) {D};
-                    \node (E) at (5, 1.67) {E};
-
-                    \node (C) at (2.5,-0.67) {C};
-
-                    \node (F) at (2.5,-3) {F};
-                \end{scope}
-                \begin{scope}[>={Stealth[black]}, every edge/.style={draw=red,very thick}]
-                    \path [->] (A) edge node {$5$} (B);
-                    \path [->] (A) edge node {$4$} (D);
-                    \path [->] (D) edge node {$2$} (C);
-                    \path [->] (A) edge node {$3$} (E);
-                    \path [->] (C) edge node {$2$} (F);
-                \end{scope}
-            \end{tikzpicture}
+            \onslide<2->{
+                \begin{tikzpicture}
+                    \begin{scope}[every node/.style={circle,thick,draw}]
+                        \node (A) at (2.5, 4) {A};
+    
+                        \node (B) at (0, 1.67) {B};
+                        \node (D) at (2.5, 1.67) {D};
+                        \node (E) at (5, 1.67) {E};
+    
+                        \node (C) at (2.5,-0.67) {C};
+    
+                        \node (F) at (2.5,-3) {F};
+                    \end{scope}
+                    \begin{scope}[>={Stealth[black]},every node/.style={inner sep=1pt,fill={rgb,255:red,250;green,250;blue,250},circle},every edge/.style={draw=red,very thick}]
+                        \path [->] (A) edge node {$5$} (B);
+                        \path [->] (A) edge node {$4$} (D);
+                        \path [->] (D) edge node {$2$} (C);
+                        \path [->] (A) edge node {$3$} (E);
+                        \path [->] (C) edge node {$2$} (F);
+                    \end{scope}
+                \end{tikzpicture}
+            }
         \end{column}
         \begin{column}{0.30\textwidth}
             \begin{tabular}{c|c|c}
@@ -610,81 +653,6 @@
             \end{tabular}
         \end{column}
     \end{columns}
-\end{frame}
-\begin{frame}{Blocks}
-\begin{block}{Block Title}
-You can also highlight sections of your presentation in a block, with it's own title
-\end{block}
-\begin{theorem}
-There are separate environments for theorems, examples, definitions, lemmas and proofs.
-\end{theorem}
-\begin{lemma}
-    \[\sum_{v\in V}\deg^-(v)=\sum_{v\in V}\deg^+(v)=|E|\]
-\end{lemma}
-\begin{proof}
-    Left as an exercise to the reader.
-\end{proof}
-\begin{example}
-Here is an example of an example block.
-\end{example}
-\end{frame}
-
-% Placing a * after \section means it will not show in the
-% outline or table of contents.
-\section*{Summary}
-
-\begin{frame}{Summary}
-    \begin{itemize}
-    \item
-        The \alert{first main message} of your talk in one or two lines.
-    \item
-        The \alert{second main message} of your talk in one or two lines.
-    \item
-        Perhaps a \alert{third message}, but not more than that.
-    \end{itemize}
-
-    \begin{itemize}
-    \item
-        Outlook
-        \begin{itemize}
-        \item
-            Something you haven't solved.
-        \item
-            Something else you haven't solved.
-        \end{itemize}
-    \end{itemize}
-\end{frame}
-
-
-
-% All of the following is optional and typically not needed.
-\appendix
-\section<presentation>*{\appendixname}
-\subsection<presentation>*{For Further Reading}
-
-\begin{frame}[allowframebreaks]
-    \frametitle<presentation>{For Further Reading}
-
-    \begin{thebibliography}{10}
-
-    \beamertemplatebookbibitems
-    % Start with overview books.
-
-    \bibitem{Author1990}
-        A.~Author.
-        \newblock {\em Handbook of Everything}.
-        \newblock Some Press, 1990.
-
-
-    \beamertemplatearticlebibitems
-    % Followed by interesting articles. Keep the list short.
-
-    \bibitem{Someone2000}
-        S.~Someone.
-        \newblock On this and that.
-        \newblock {\em Journal of This and That}, 2(1):50--100,
-        2000.
-    \end{thebibliography}
 \end{frame}
 
 \end{document}
